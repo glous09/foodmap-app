@@ -1,0 +1,69 @@
+* {
+  font-family: 'Open Sans', sans-serif;
+  margin: 0;
+  padding: 0
+  -webkit-box-sizing:border-box;
+  -moz-box-sizing:border-box;
+  box-sizing: border-box;
+
+}
+
+ .background-black {
+  background:black;
+  color: orange;
+  font-size: 3rem;
+  height: auto;
+  position:absolute;
+  width: 100%;
+}
+/*Logo*/
+.logo {
+  height: 100%;
+  width:100%;
+  position:absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.square {
+  border: 1px solid #fff;
+  padding: .3em;
+}
+
+.line {
+ height: 1px;
+ background-color: #fff;
+ margin-top: 15px;
+}
+
+.map {
+ margin-top:60px;
+}
+
+.food {
+  margin-top:30px;
+}
+
+.search{
+    margin-top:30px;
+}
+.search > input {
+ height: 40px;
+}
+
+.lupa {
+  margin-bottom: 40px;
+  background: black;
+}
+
+.lupa > i {
+  height: 25px;
+  color:#fff;
+}
+
+.food {
+  height: 10%;
+}
