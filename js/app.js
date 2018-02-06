@@ -1,14 +1,37 @@
-var contact = {
 
-};
-
-var $searchFood = $("#searching");
-
-function filteredFood() {
-  var searchFood = $("#searching").val().toLowerCase();
-  if($("#searching").val().trim().length > 0) {/Si el valor de entrada (sin espacios) es mayor a cero/
-      var filteredFood = contacts.filter(function(contact) {/Del arreglo total "contacts", filtra de acuerdo a una función que depende de contact (cada objeto o valor agregado)/
-         // console.log(contact);
-          return contact.name.toLowerCase().indexOf(searchContact) >= 0;/Regresa el nombre del contacto que coincide con el valor buscado el cual es convertido previamente en minúscula/
-      });
+function loadPage() { //Función que contiene funciones
+  $("#searcher").focus();//Comprobamos si se pulsa una tecla
+  $("#searcher").keyup(filterRestaurant);//Filtra los restaurantes
 }
+
+function paintContactsInHtml (restaurants) {
+var $newRestaurant = $("<div />", {
+  "class": "col-6"
+});
+var $containerRestauranteName = $("<h4 />");
+//var $imgRestaurant = $("img")
+//Agregando elementos al html
+$containerRestauranteName.text(restaurants.name);
+$newRestaurant.append($containerRestauranteName);
+//$imgRestaurant.attr('src','data-name', restaurant.name);
+console.log($newRestaurant);
+$("#img-food").prepend($newRestaurant);
+}
+
+function filterRestaurant (){
+  var searchRestaurant = $("#searcher").val().toLowerCase();
+  if($("#searcher").val().trim().length > 0) {
+    var filteredRestaurant = restaurants.filter(function(restaurants) {
+      return restaurants.name.toLowerCase().indexOf(searchRestaurant) >= 0;
+    });
+    $("#img-food").empty();
+    filteredRestaurant.forEach(function(restaurants){
+      paintRestaurantInHtml(restaurants);
+    });
+  } else {
+    $("#img-food").empty();
+    restaurants.forEach(function(restaurants){
+      paintRestaurantInHtml(restaurants);
+    });
+  }
+  $(document).ready(loadPage);
