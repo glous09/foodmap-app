@@ -1,5 +1,5 @@
 * {
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Roboto', sans-serif;
   margin: 0;
   padding: 0
   -webkit-box-sizing:border-box;
@@ -12,7 +12,7 @@
   background:black;
   color: orange;
   font-size: 3rem;
-  height: auto;
+  height: 100%;
   position:absolute;
   width: 100%;
 }
@@ -66,4 +66,41 @@
 
 .food {
   height: 10%;
+}
+
+.content-images {
+  font-size: 20px;
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.col-3 > a {
+  text-decoration: none;
+  color: #fff;
+  padding: 8px;
+}
+
+.category-list {
+  font-size: 20px;
+  display: flex;
+  padding: 20px;
+  z-index: auto;
+}
+
+.col-3 {
+  padding: 20px;
+
+}
+.category-list  .item {
+  display: block;
+  padding: 5px 0;
+  background: orange;
+  border-radius: 5%;
+  text-decoration: none;
+  color: #fff;
+}
+
+.category-list .item-active {
+  background: #f9e616;
 }
