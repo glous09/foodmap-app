@@ -16,3 +16,6 @@ en a categoría "mexicana", aparecen todas las imagenes correspondientes a esta.
 1. html
 2. bootstrap
 3. Jquery
+
+***Realizado para:***
+***LABORATORIA***
